@@ -30,21 +30,7 @@ Published the image to Docker Hub
 
 Verified the image could be pulled and run in a clean environment
 
-Stage 3: CI/CD with GitHub Actions
-![CI Workflow Overview](./screenshots/ci-overview.png)
-![CI Trigger on Git Push](./screenshots/ci-git-push.png)
-![CI Data Regression Detection](./screenshots/ci-multi-docs.png)
-
-
-Created a GitHub Actions workflow triggered on every push
-
-Rebuilt embeddings and ran semantic tests in CI
-
-Introduced a mock LLM mode to make tests deterministic
-
-Observed CI failures when knowledge-base changes broke expected behaviour
-
-Stage 4: Kubernetes Deployment
+Stage 3: Kubernetes Deployment
 ![Kubernetes Pods](./screenshots/k8s-pods.png)
 ![Kubernetes Service](./screenshots/k8s-service.png)
 ![API via Kubernetes](./screenshots/k8s-api-response.png)
@@ -58,7 +44,7 @@ Exposed the application using a NodePort Service
 
 Verified request flow from local machine to Pods via the Service
 
-Stage 5: Self-Healing and Reliability
+Stage 4: Self-Healing and Reliability
 ![Kubernetes Self-Healing](./screenshots/k8s-self-healing.png)
 ![New Pod Created Automatically](./screenshots/k8s-new-pod.png)
 
@@ -68,3 +54,17 @@ Manually deleted running Pods
 Observed Kubernetes automatically create replacement Pods
 
 Confirmed the Service continued routing traffic without changes
+
+Stage 5: CI/CD with GitHub Actions
+![CI Workflow Overview](./screenshots/ci-overview.png)
+![CI Trigger on Git Push](./screenshots/ci-git-push.png)
+![CI Data Regression Detection](./screenshots/ci-multi-docs.png)
+
+
+Created a GitHub Actions workflow triggered on every push
+
+Rebuilt embeddings and ran semantic tests in CI
+
+Introduced a mock LLM mode to make tests deterministic
+
+Observed CI failures when knowledge-base changes broke expected behaviour
